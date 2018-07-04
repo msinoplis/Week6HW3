@@ -1,0 +1,12 @@
+<h1>Patents List</h1>
+<p>Click on the names for more information</p>
+
+<%@patent.each do |patent|%>
+
+<h4>Name: <%=patent.name%></h4>
+<h5>Date: <%=patent.date%></h5>
+<p>Signed: <%=patent.signed%></p>
+
+<%=link_to patent.name , patents_path(patent)%>
+
+<%end%>
